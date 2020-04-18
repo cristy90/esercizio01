@@ -9,12 +9,19 @@ import { StudentService } from '../services/student.service';
 })
 export class StudentsListComponent implements OnInit {
 title:string='lista studenti';
-students:Student[]=[];
+students:Student[];
+showloading:boolean=false;
  
   constructor(private studentService  : StudentService ) { }
 
   ngOnInit(): void {
-    this.students = this.studentService.getStudents();
+    this.showloading=true;
+    //chiamo il servizio.il metodo del servizio.mi sovvrascrivo al'observabole(funzione)
+    //this.studentService.getStudents().subscribe(function(response ){this.students = response});
+    this.studentService.getStudents().subscribe(response =>{
+      this.showloading=false;
+      this.students = response
+    });
   }
 
 }

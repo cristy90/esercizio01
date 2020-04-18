@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Student } from '../student';
+import { Observable, of } from 'rxjs';
+import {delay} from 'rxjs/operators';
 
 const STUDENTS=[
   {
@@ -108,8 +110,12 @@ export class StudentService {
 
   constructor() { }
 
-getStudents():Student[]{
-  return STUDENTS;
+// getStudents():Student[]{
+//   return STUDENTS;
+// }
+
+getStudents(): Observable<Student[]>{
+ return of (STUDENTS).pipe(delay(1000)); //delay simula la risposta del server dopo un certo tempo
 }
 
 }
