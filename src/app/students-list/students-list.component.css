@@ -1,0 +1,29 @@
+.student{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: stretch;
+    border:1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;;
+}
+.student .id{
+    padding:10px;
+    background: lightpink;
+    color:whitesmoke;
+    width: 36px;
+    text-align: center;
+}
+.student .name{
+    padding:10px;
+}
+.student .img img{
+    padding: 5px;
+    height: 40px;
+    
+}
+.student-list{
+    display:flex;
+    flex-flow: column;
+    height: 200px;
+    width: 300px;;
+}
