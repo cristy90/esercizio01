@@ -4,7 +4,8 @@
     align-items: stretch;
     border:1px solid gray;
     border-radius: 5px;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 .student .id{
     padding:10px;
@@ -22,8 +23,12 @@
     
 }
 .student-list{
-    display:flex;
-    flex-flow: column;
-    height: 200px;
-    width: 300px;;
+    display:inline-block;
+
+}
+.student:hover .id{
+    background: rgb(226, 63, 231);
+} 
+.student:hover .name{
+    background: rgb(178, 139, 240)
 }

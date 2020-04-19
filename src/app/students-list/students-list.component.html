@@ -1,9 +1,12 @@
 <h2>{{title}}</h2>
 <h3 style="color: red;" *ngIf="showloading">loading data....</h3>
 <div class="student-list">
-    <div class ="student" *ngFor="let student of students">
+    <div class ="student" *ngFor="let student of students" (click)="selectThisStudent(student)">
         <div class="id" >{{student.id}}</div> 
         <div *ngIf="student.imgUrl" class="img"><img [src]="student.imgUrl" alt=""/></div>
         <div class="name">{{student.firstname| uppercase}} {{student.lastname}}</div> 
     </div>
+</div>
+<div>
+   
 </div>

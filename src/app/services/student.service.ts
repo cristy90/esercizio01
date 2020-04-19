@@ -107,7 +107,7 @@ const STUDENTS=[
   providedIn: 'root'
 })
 export class StudentService {
-
+ selectedStudent: Student;
   constructor() { }
 
 // getStudents():Student[]{

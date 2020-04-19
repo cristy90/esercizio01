@@ -23,5 +23,7 @@ showloading:boolean=false;
       this.students = response
     });
   }
-
+  selectThisStudent(dati:Student){
+    this.studentService.selectedStudent=dati;
+  }
 }
